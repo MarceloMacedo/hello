@@ -46,6 +46,7 @@ limitations under the License.
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
+      	/*
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
         document.getElementById("debug").innerHTML+='Starting Receiver Manager';
@@ -84,12 +85,7 @@ limitations under the License.
 		   // Handle message
 		   document.getElementById("debug").innerHTML+="Entrou mensagem teste"
 		}
-/*
-	customMessageBus.addEventListener("message", function(message) {
-                //window.castMessageBus.broadcast("Got your message");
-                 document.getElementById("debug").innerHTML+=message;
-            });
-	*/
+
 	
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
@@ -115,7 +111,7 @@ limitations under the License.
         document.getElementById("message").innerHTML+=text;
         window.castReceiverManager.setApplicationState(text);
       };
-         
+        */ 
      //   window.onload = function() {
          window.mediaElement = document.getElementById('media');
             window.mediaManager = new cast.receiver.MediaManager(window.mediaElement);
