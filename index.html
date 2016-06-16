@@ -81,12 +81,12 @@ limitations under the License.
 		   // Handle message
 		   document.getElementById("debug").innerHTML+="Entrou mensagem teste"
 		}
-
-	window.customMessageBus.addEventListener("message", function(message) {
+/*
+	customMessageBus.addEventListener("message", function(message) {
                 //window.castMessageBus.broadcast("Got your message");
                  document.getElementById("debug").innerHTML+=message;
             });
-	
+	*/
 	
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
