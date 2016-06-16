@@ -81,6 +81,11 @@ limitations under the License.
 		   // Handle message
 		   document.getElementById("debug").innerHTML+="Entrou mensagem teste"
 		}
+
+	window.customMessageBus.addEventListener("message", function(message) {
+                //window.castMessageBus.broadcast("Got your message");
+                 document.getElementById("debug").innerHTML+=message;
+            });
 	
 	
         // handler for the CastMessageBus message event
@@ -109,7 +114,7 @@ limitations under the License.
       };
       
         window.onload = function() {
-            window.mediaElement = document.getElementById('media');
+          /*  window.mediaElement = document.getElementById('media');
             window.mediaManager = new cast.receiver.MediaManager(window.mediaElement);
             
             window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -121,6 +126,7 @@ limitations under the License.
             });
 
             window.castReceiverManager.start();
+            */
         };
       
       
