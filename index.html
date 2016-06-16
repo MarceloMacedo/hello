@@ -46,7 +46,7 @@ limitations under the License.
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
-      	/*
+      
         cast.receiver.logger.setLevelValue(0);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
         document.getElementById("debug").innerHTML+='Starting Receiver Manager';
@@ -78,15 +78,15 @@ limitations under the License.
         };
 
         // create a CastMessageBus to handle messages for a custom namespace
-        window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:br.com.wl.imimics');
+        window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:com.google.cast.sample.helloworld');
 	 //window.castReceiverManager.getCastMessageBus('urn:x-cast:br.com.wl.imimics').;
-	var customMessageBus = castReceiverManager.getCastMessageBus('urn:x-cast:br.com.wl.imimics');
+/*	var customMessageBus = castReceiverManager.getCastMessageBus('urn:x-cast:br.com.wl.imimics');
 		customMessageBus.onMessage = function(event) {
 		   // Handle message
 		   document.getElementById("debug").innerHTML+="Entrou mensagem teste"
 		}
 
-	
+	*/
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
       
@@ -111,7 +111,7 @@ limitations under the License.
         document.getElementById("message").innerHTML+=text;
         window.castReceiverManager.setApplicationState(text);
       };
-        */ 
+    	/*
      //   window.onload = function() {
          window.mediaElement = document.getElementById('media');
             window.mediaManager = new cast.receiver.MediaManager(window.mediaElement);
@@ -127,7 +127,7 @@ limitations under the License.
             window.castReceiverManager.start();
          
     //    };
-      
+          */ 
       };//end onload
     </script>
   </body>
