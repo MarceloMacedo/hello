@@ -38,7 +38,7 @@ limitations under the License.
   </head>
   <body>
 	<DIV id="message">Talk to me</DIV>
-	<div id='debug'>debug</div>
+	<div id='debug'>debug:<br></div>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
@@ -54,8 +54,8 @@ limitations under the License.
         
         // handler for 'senderconnected' event
         castReceiverManager.onSenderConnected = function(event) {
-         document.getElementById("debug").innerHTML+='Received Sender Connected event: ' + event.data;
-          document.getElementById("debug").innerHTML+="<br>On Sender Connected"+window.castReceiverManager.getSender(event.data).userAgent;
+         document.getElementById("debug").innerHTML+="<br>On Sender Connected event data"+'Received Sender Connected event: ' + event.data;
+          document.getElementById("debug").innerHTML+="<br>On Sender Connected user agent"+window.castReceiverManager.getSender(event.data).userAgent;
         };
         
         // handler for 'senderdisconnected' event
